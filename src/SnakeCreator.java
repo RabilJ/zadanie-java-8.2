@@ -2,9 +2,9 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class SnakeCreator {
-
+private static Scanner sc = new Scanner(System.in);
     public static Snake addSnek(){
-        Scanner sc = new Scanner(System.in);
+
         sc.useLocale(Locale.US);
         Snake snake = new Snake(null,0.0);
 
