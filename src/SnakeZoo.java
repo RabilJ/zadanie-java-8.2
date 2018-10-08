@@ -8,18 +8,17 @@ public class SnakeZoo {
 
         for (int i = 0; i < snakes.length; i++) {
             System.out.println("Wąż numer " + (i + 1));
-            snakes[i] = SnakeCreator.addSnek();
+            Snake snake = SnakeCreator.addSnek();
             if (i != 0) {
                 for (int j = i - 1; j >= 0; j--) {
-
-                    while(snakes[i].equals(snakes[j])) {
+                    while(snake.equals(snakes[j])) {
                         System.out.println("Mamy takiego węża, przynieś oryginalnego");
                         System.out.println("Wąż numer " + (i + 1));
-                        snakes[i] = SnakeCreator.addSnek();
+                        snake = SnakeCreator.addSnek();
                     }
-
                 }
             }
+            snakes[i]= snake;
         }
             System.out.println("Nasze węże");
             for (Snake snake : snakes) {
